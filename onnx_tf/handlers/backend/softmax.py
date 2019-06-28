@@ -16,8 +16,8 @@ class Softmax(BackendHandler):
     axis = node.attrs.get("axis", 1)
     axis = axis if axis >= 0 else len(np.shape(x)) + axis
 
-    if axis == len(np.shape(x)) - 1:
-      return [cls.make_tensor_from_onnx_node(node, **kwargs)]
+    #if axis == len(np.shape(x)) - 1:
+    #  return [cls.make_tensor_from_onnx_node(node, **kwargs)]
 
     shape = tf.shape(x)
     cal_shape = (tf.reduce_prod(shape[0:axis]),

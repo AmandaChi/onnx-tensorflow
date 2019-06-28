@@ -5,7 +5,7 @@ from onnx_tf.handlers.handler import onnx_op
 from onnx_tf.handlers.handler import tf_func
 
 @onnx_op("IsInf")
-@tf_func(tf.math.is_inf)
+@tf_func(tf.is_inf)
 class IsInf(BackendHandler):
 
   @classmethod
